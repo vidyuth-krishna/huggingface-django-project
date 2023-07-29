@@ -1,0 +1,78 @@
+<!-- myapp/templates/game.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pictionary Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #010009;
+            color: #000000;
+        }
+
+        h1 {
+            color: #26b082;
+        }
+
+        /* Add custom styles to center the Gradio interface */
+        .gr-interface {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin: 20px;
+        }
+
+        .gr-interface iframe {
+            width: 800px; /* Adjust the width as needed */
+            height: 600px; /* Adjust the height as needed */
+        }
+
+        a.button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a.button:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-style: italic;
+            color: #888;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Pictionary Game</h1>
+
+    <div class="gr-interface">
+        <!-- Add the Gradio interface here -->
+        <iframe src="https://vidyuth-pictionary.hf.space"></iframe>
+    </div>
+
+    <a href="{% url 'main_page' %}" class="button">Go Back to Home</a>
+
+    <div class="footer">
+        An ML project by S.Vidyuth Krishna
+    </div>
+</body>
+
+</html>

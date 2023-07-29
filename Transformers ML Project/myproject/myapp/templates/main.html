@@ -1,0 +1,72 @@
+<!-- myapp/templates/main.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Project Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: beige; /* Set background color to beige */
+            color: #000000;
+        }
+
+        h1 {
+            color: #004d40;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #00695c;
+            color: #ffffff;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #004d40;
+        }
+
+        /* Added styles for the footer text */
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-style: italic;
+            color: #888;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Huggingface🤗 Machine Learning Project</h1>
+    <div class="buttons-container">
+        <a href="{% url 'translate_page' %}" class="button">Translate</a>
+        <a href="{% url 'summarize_page' %}" class="button">Summarize</a>
+        <a href="{% url 'qnsans_page' %}" class="button">Question-Answer</a>
+        <a href="{% url 'game_page' %}" class="button">Play a Game</a>
+    </div>
+
+</body>
+
+<div class="footer">
+     ML project by S.Vidyuth Krishna
+</div>
+</html>
